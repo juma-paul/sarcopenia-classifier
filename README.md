@@ -56,7 +56,8 @@ A machine learning-powered diagnostic tool designed to assist healthcare provide
 ## Installation
 ### Clone the repository
 ```bash
-git clone https://github.com/yourusername/sarcopenia-diagnosis-system.git
+git clone https://github.com/juma-paul/sarcopenia-classifier
+cd sarcopenia_project # and create a virtual environment
 ```
 ### Install dependencies
 ```bash
@@ -81,4 +82,4 @@ python manage.py runserver
 
 MIT License ([Link](https://opensource.org/license/mit))
 
-*Note:* This system is for medical screening and should not replace professional medical advice.
+***Note:*** This system is for medical screening and should not replace professional medical advice.
