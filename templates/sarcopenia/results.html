@@ -1,0 +1,31 @@
+{% extends 'general/base.html' %}
+{% block title %}Results{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-lg-10 offset-lg-1">
+      <div class="card shadow">
+        <div class="card-body">
+          <h2 style="font-family: Arial, sans-serif; color: #2a5877; padding-bottom: 8px; font-size: 28px; margin-top: 20px;">Sarcopenia Diagnosis</h2>
+          <p><strong>Message:</strong> {{ data.message }}</p>
+          <!-- Return home button -->
+          <a href="{% url 'sarcopenia-index' %}" class="btn btn-secondary">Return to Home</a>
+          
+          {% if data.additional_data_required %}
+            {% if data.additional_model_used == 'model2' %}
+              <a href="{% url 'model_two' data_id=data.id %}" class="btn btn-primary mt-2">Proceed to Model Two Data Entry</a>
+            {% elif data.additional_model_used == 'model3' %}
+              <a href="{% url 'model_three' model_two_id=data.model_two_data.id %}" class="btn btn-primary mt-2">Proceed to Model Three Data Entry</a>
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+

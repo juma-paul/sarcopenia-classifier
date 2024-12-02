@@ -1,0 +1,21 @@
+{% extends 'general/base.html' %}
+{% block title %}Model Two Data Entry{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-lg-10 offset-lg-1">
+      <h2 style="font-family: Arial, sans-serif; color: #2a5877; padding-bottom: 8px; font-size: 28px; margin-top: 20px;">Functional Performance Evaluation</h2>
+      <div class="card shadow">
+        <div class="card-body">
+          <form method="POST">
+            {% csrf_token %}
+            {% crispy form %}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

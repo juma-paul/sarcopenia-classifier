@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'sarcopenia-index' %}">Sarcopenia Inc.</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+         <a class="nav-link" href="{% if data_id %}{% url 'diagnosis' data_id=data_id %}{% else %}{% url 'sarcopenia-index' %}{% endif %}">Diagnosis</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  
+</nav>
+
+<style>
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .navbar-toggler {
+    border: 2px solid white;
+    border-radius: 5px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 18px;
+  }
+</style>
